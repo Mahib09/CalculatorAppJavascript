@@ -1,0 +1,140 @@
+:root {
+  --darkmodeOrange: #f1a43c;
+  --darkmodeDarkGrey: #333333;
+  --darkmodeLightGrey: #a5a5a5;
+  --lightmodeOrange: #ef9535;
+  --lightmodeDarkGrey: #808080;
+  --lightmodeLightGrey: #e5e5e5;
+  --black: #000000;
+  --white: #ffffff;
+  --bodybackground: #00033674;
+}
+body {
+  background-color: var(--bodybackground);
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+main {
+  margin: auto;
+}
+.mainbodyBackground {
+  background-color: var(--black);
+  height: 600px;
+  width: 330px;
+  display: flex;
+  border-radius: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+.dynamicIsland {
+  height: 20px;
+  width: 70px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 10px;
+  background-color: rgb(19, 19, 19);
+  display: flex;
+  align-items: center;
+}
+.camera {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-left: auto;
+  background-color: var(--darkmodeOrange);
+}
+.closeBar {
+  width: 30%;
+  margin-bottom: 20px;
+  background-color: var(--white);
+  height: 2px;
+}
+.mainbody {
+  background-color: var(--black);
+  color: var(--white);
+  height: 520px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 7px;
+  margin: auto;
+  border: 1px solid red;
+}
+.mainbody .header {
+  display: flex;
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 10px;
+  width: 280px;
+}
+.header .network {
+  margin-left: auto;
+}
+.mainbody input {
+  height: 80px;
+  width: 100%;
+  background-color: var(--black);
+  border: none;
+  color: var(--white);
+  font-size: 3rem;
+  text-align: right;
+}
+input:focus {
+  border: none;
+  outline: none;
+}
+.mainbody button {
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+}
+.lightgrey {
+  background-color: var(--darkmodeLightGrey);
+  border: none;
+  color: var(--black);
+  font-size: 1.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+.lightgrey:hover {
+  background-color: var(--lightmodeLightGrey);
+}
+.darkgrey {
+  background-color: var(--darkmodeDarkGrey);
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+.darkgrey:hover {
+  background-color: var(--lightmodeDarkGrey);
+}
+.orange {
+  background-color: var(--darkmodeOrange);
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+.orange:hover {
+  background-color: #ebb36a;
+}
+.mainbody .zero {
+  width: 143px;
+  border-radius: 50px;
+}
