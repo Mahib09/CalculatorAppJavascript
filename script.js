@@ -102,4 +102,44 @@ function addDecimal() {
     firstValue += ".";
     display.value = firstValue;
   }
-}
+} //toggle lightmode
+const togglebtn = document.querySelector(".toogleinput");
+const body = document.querySelector("body");
+const border = document.querySelector(".border");
+const mainbody = document.querySelector(".mainbody");
+const mainbodybg = document.querySelector(".mainbodyBackground");
+const lightgrey = document.querySelectorAll(".lightgrey");
+const darkgrey = document.querySelectorAll(".darkgrey");
+const input = document.querySelector(".mainbody input");
+const closebar = document.querySelector(".closeBar");
+togglebtn.addEventListener("click", () => {
+  check = togglebtn.checked;
+  if (check) {
+    body.classList.add("bodyLightmode");
+    mainbody.classList.add("mainbodyLightmode");
+    mainbodybg.classList.add("mainbodyLightmode");
+    input.classList.add("displayLightmode");
+    border.classList.add("borderLightmode");
+    closebar.classList.add("closebarLightmode");
+    lightgrey.forEach((comp) => {
+      comp.classList.add("lightgreyLightmode");
+    });
+    darkgrey.forEach((comp) => {
+      comp.classList.add("darkgreyLightmode");
+    });
+  } else {
+    body.classList.remove("bodyLightmode");
+    mainbody.classList.remove("mainbodyLightmode");
+    mainbodybg.classList.remove("mainbodyLightmode");
+    border.classList.remove("borderLightmode");
+    input.classList.remove("displayLightmode");
+    closebar.classList.remove("closebarLightmode");
+    lightgrey.forEach((comp) => {
+      comp.classList.remove("lightgreyLightmode");
+    });
+    darkgrey.forEach((comp) => {
+      comp.classList.remove("darkgreyLightmode");
+    });
+    border.classList.remove("borderLightmode");
+  }
+});
