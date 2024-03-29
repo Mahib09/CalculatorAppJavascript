@@ -11,10 +11,10 @@ numbers.forEach((number) => {
   number.addEventListener("click", (e) => {
     if (!operation) {
       firstValue += e.target.innerText;
-      display.value = firstValue;
+      display.value = parseFloat(firstValue).toLocaleString();
     } else {
       secondValue += e.target.innerText;
-      display.value = secondValue;
+      display.value = parseFloat(secondValue).toLocaleString();
     }
   });
 });
@@ -54,7 +54,7 @@ function calculate() {
       case "%":
         result = (num1 * num2) / 100;
     }
-    display.value = result;
+    display.value = result.toLocaleString();
     firstValue = result.toString();
     secondValue = "";
     operation = "";
