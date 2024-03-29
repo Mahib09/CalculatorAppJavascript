@@ -40,10 +40,10 @@ function calculate() {
       case "-":
         result = num1 - num2;
         break;
-      case "X":
+      case "x":
         result = num1 * num2;
         break;
-      case "/":
+      case "÷":
         if (num2 === 0) {
           alert("Cannot Divide by zero");
           clearDisplay();
@@ -102,7 +102,15 @@ function addDecimal() {
     firstValue += ".";
     display.value = firstValue;
   }
-} //toggle lightmode
+}
+//setting up time
+const Settime = document.querySelector(".time");
+var today = new Date();
+let options = { timeStyle: "short", hour12: false };
+let time = today.toLocaleTimeString("en-US", options);
+Settime.innerHTML = time;
+
+//toggle lightmode
 const togglebtn = document.querySelector(".toogleinput");
 const body = document.querySelector("body");
 const border = document.querySelector(".border");
@@ -112,6 +120,7 @@ const lightgrey = document.querySelectorAll(".lightgrey");
 const darkgrey = document.querySelectorAll(".darkgrey");
 const input = document.querySelector(".mainbody input");
 const closebar = document.querySelector(".closeBar");
+const instruction = document.querySelector(".instruction");
 togglebtn.addEventListener("click", () => {
   check = togglebtn.checked;
   if (check) {
@@ -127,6 +136,7 @@ togglebtn.addEventListener("click", () => {
     darkgrey.forEach((comp) => {
       comp.classList.add("darkgreyLightmode");
     });
+    instruction.innerHTML = "Click the Camera to switch to Dark-Mode";
   } else {
     body.classList.remove("bodyLightmode");
     mainbody.classList.remove("mainbodyLightmode");
@@ -141,5 +151,6 @@ togglebtn.addEventListener("click", () => {
       comp.classList.remove("darkgreyLightmode");
     });
     border.classList.remove("borderLightmode");
+    instruction.innerHTML = "Click the Camera to switch to Light-Mode";
   }
 });

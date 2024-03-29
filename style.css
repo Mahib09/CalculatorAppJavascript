@@ -32,6 +32,9 @@ input[type="number"] {
 main {
   margin: auto;
 }
+.instruction {
+  padding: 18px;
+}
 .border {
   height: 610px;
   width: 340px;
