@@ -5,43 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="script.js" defer></script>
   </head>
   <body>
     <main>
-      <div class="mainbodyBackground">
-        <div class="dynamicIsland">
-          <div class="camera"></div>
-        </div>
-        <div class="mainbody">
-          <div class="header">
-            <p class="time">3:15</p>
-            <p class="network"><i></i></p>
-            <p class="5G">5G</p>
-            <p class="battery"><i></i></p>
+      <div class="border">
+        <div class="mainbodyBackground">
+          <div class="dynamicIsland">
+            <div class="sensor"></div>
+            <div class="camera"></div>
           </div>
-          <input type="number" />
-          <button class="lightgrey">AC</button>
-          <button class="lightgrey">+/-</button>
-          <button class="lightgrey">%</button>
-          <button class="orange">/</button>
-          <button class="darkgrey">7</button>
-          <button class="darkgrey">8</button>
-          <button class="darkgrey">9</button>
-          <button class="orange">*</button>
-          <button class="darkgrey">4</button>
-          <button class="darkgrey">5</button>
-          <button class="darkgrey">6</button>
-          <button class="orange">-</button>
-          <button class="darkgrey">1</button>
-          <button class="darkgrey">2</button>
-          <button class="darkgrey">3</button>
-          <button class="orange">+</button>
-          <button class="darkgrey zero">0</button>
-          <button class="darkgrey">,</button>
-          <button class="orange">=</button>
+          <div class="mainbody">
+            <div class="header">
+              <p class="time">3:15</p>
+              <p class="network"><i class="fa fa-signal-bars"></i></p>
+              <p class="5G">5G</p>
+              <p class="battery"><i class="fa fa-battery-full"></i></p>
+            </div>
+            <input type="display" class="display" readonly />
+            <button class="lightgrey AC" data-type="function">AC</button>
+            <button class="lightgrey signChange" data-type="function">
+              +/-
+            </button>
+            <button class="lightgrey percent" data-type="operation">%</button>
+            <button class="orange division" data-type="operation">/</button>
+            <button class="darkgrey seven" data-type="number">7</button>
+            <button class="darkgrey eight" data-type="number">8</button>
+            <button class="darkgrey nine" data-type="number">9</button>
+            <button class="orange multiply" data-type="operation">X</button>
+            <button class="darkgrey four" data-type="number">4</button>
+            <button class="darkgrey five" data-type="number">5</button>
+            <button class="darkgrey six" data-type="number">6</button>
+            <button class="orange minus" data-type="operation">-</button>
+            <button class="darkgrey one" data-type="number">1</button>
+            <button class="darkgrey two" data-type="number">2</button>
+            <button class="darkgrey three" data-type="number">3</button>
+            <button class="orange plus" data-type="operation">+</button>
+            <button class="darkgrey zero" data-type="number">0</button>
+            <button class="darkgrey decimal" data-type="function">.</button>
+            <button class="orange equals" data-type="function">=</button>
+          </div>
+          <hr class="closeBar" />
         </div>
-        <hr class="closeBar" />
       </div>
     </main>
   </body>

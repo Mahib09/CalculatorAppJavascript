@@ -1,8 +1,7 @@
 :root {
-  --darkmodeOrange: #f1a43c;
   --darkmodeDarkGrey: #333333;
   --darkmodeLightGrey: #a5a5a5;
-  --lightmodeOrange: #ef9535;
+  --Orange: #ef9535;
   --lightmodeDarkGrey: #808080;
   --lightmodeLightGrey: #e5e5e5;
   --black: #000000;
@@ -16,6 +15,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  font-family: Helvetica, sans-serif;
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -31,14 +31,23 @@ input[type="number"] {
 main {
   margin: auto;
 }
+.border {
+  height: 610px;
+  width: 340px;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 30px;
+}
 .mainbodyBackground {
-  background-color: var(--black);
+  background-color: black;
   height: 600px;
   width: 330px;
   display: flex;
   border-radius: 30px;
   flex-direction: column;
   align-items: center;
+  margin: auto;
 }
 .dynamicIsland {
   height: 20px;
@@ -49,17 +58,25 @@ main {
   background-color: rgb(19, 19, 19);
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 .camera {
   height: 10px;
   width: 10px;
   border-radius: 50%;
+  background-color: var(--black);
+  margin-right: 5px;
+}
+.sensor {
   margin-left: auto;
-  background-color: var(--darkmodeOrange);
+  height: 10px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: var(--black);
 }
 .closeBar {
   width: 30%;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   background-color: var(--white);
   height: 2px;
 }
@@ -72,9 +89,10 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 7px;
+  padding: 10px;
   margin: auto;
-  border: 1px solid red;
+  justify-content: center;
+  /* border: 1px solid red; */
 }
 .mainbody .header {
   display: flex;
@@ -82,26 +100,40 @@ main {
   margin-top: -40px;
   margin-left: 10px;
   width: 280px;
+  gap: 5px;
+  font-size: 0.8rem;
 }
 .header .network {
   margin-left: auto;
+  height: 14px;
+  width: 17px;
+}
+.network i {
+  height: 10px;
+  width: 10px;
+  color: var(--white);
 }
 .mainbody input {
-  height: 80px;
+  margin-top: 80px;
+  padding: 0 30px;
+  height: 100px;
   width: 100%;
   background-color: var(--black);
   border: none;
   color: var(--white);
   font-size: 3rem;
+
   text-align: right;
 }
-input:focus {
+input:focus,
+input:hover {
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .mainbody button {
-  width: 67px;
-  height: 67px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 .lightgrey {
@@ -125,7 +157,7 @@ input:focus {
   background-color: var(--lightmodeDarkGrey);
 }
 .orange {
-  background-color: var(--darkmodeOrange);
+  background-color: var(--Orange);
   border: none;
   color: var(--white);
   font-size: 1.5rem;
@@ -135,6 +167,6 @@ input:focus {
   background-color: #ebb36a;
 }
 .mainbody .zero {
-  width: 143px;
+  width: 130px;
   border-radius: 50px;
 }
