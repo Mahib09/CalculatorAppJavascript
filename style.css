@@ -151,6 +151,7 @@ input:hover {
   font-size: 1.5rem;
   transition: background-color 0.2s ease-in-out;
   transition: 0.2s;
+  text-align: center;
 }
 .lightgrey:hover {
   background-color: var(--lightmodeLightGrey);
@@ -162,6 +163,7 @@ input:hover {
   font-size: 1.5rem;
   transition: background-color 0.2s ease-in-out;
   transition: 0.2s;
+  text-align: center;
 }
 .darkgrey:hover {
   background-color: var(--lightmodeDarkGrey);
@@ -173,6 +175,7 @@ input:hover {
   font-size: 1.5rem;
   transition: background-color 0.2s ease-in-out;
   transition: 0.2s;
+  text-align: center;
 }
 .orange:hover {
   background-color: #ebb36a;
