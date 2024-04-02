@@ -86,12 +86,14 @@ function clearDisplay() {
   operation = "";
 }
 function tooglesign() {
-  if (operation && secondValue) {
-    secondValue = -parseFloat(secondValue);
-    display.value = secondValue;
-  } else {
-    firstValue = -parseFloat(firstValue);
-    display.value = firstValue;
+  if (firstValue || secondValue) {
+    if (operation && secondValue) {
+      secondValue = -parseFloat(secondValue);
+      display.value = secondValue;
+    } else {
+      firstValue = -parseFloat(firstValue);
+      display.value = firstValue;
+    }
   }
 }
 function addDecimal() {
